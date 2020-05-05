@@ -1,9 +1,15 @@
 import React from 'react';
+import { connect } from 'redux';
+import styled from 'styled-components/macro';
 
-const Cart = () => {
+import CartIcon from '../cart-icon/CartIcon.component';
+
+const Cart = ({ cartItems }) => {
   return (
-    <div>
-
+    <div 
+      css={`cursor: pointer;`}
+    >
+      <CartIcon />
     </div>
   )
 }

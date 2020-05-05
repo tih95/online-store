@@ -1,25 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineCoffee, AiOutlineMenu } from 'react-icons/ai';
+import styled from 'styled-components/macro';
+
+import Cart from '../cart/Cart.component';
+import { Header, LogoWrapper, LogoText, NavLinks, NavLink } from './Navbar.styles';
 
 const Navbar = () => {
   return (
-    <header>
+    <Header>
       <Link to="/">
-        <p>Tristan's Coffee</p>
-        <AiOutlineCoffee />
+        <LogoWrapper>
+          <LogoText>Tristan's Coffee</LogoText>
+          <AiOutlineCoffee size={24} />
+        </LogoWrapper>
       </Link>
 
-      <AiOutlineMenu />
+      <AiOutlineMenu css={`display: none;`} />
 
-      <nav>
-        <ul>
-          <li>
-            <Link to="/shop">Shop</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <NavLinks>
+        <NavLink to="/about">About Us</NavLink>
+        <NavLink to="/shop">Shop</NavLink>
+        <Cart css={`display: inline;`} />
+      </NavLinks>
+
+      
+    </Header>
   )
 }
 
