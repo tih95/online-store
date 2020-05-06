@@ -14,15 +14,13 @@ const Hero = ({ history }) => {
   return (
     <div
       css={`
-        padding: 1.5em 0;
-        height: 50vh;
+        padding: 5em 4em;
         background: linear-gradient(to right, rgba(240, 242, 240, 0.5), rgba(0, 12, 64, 0.5)), url(${heroImg}) ;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
       `}
     >
       <HeroContent>

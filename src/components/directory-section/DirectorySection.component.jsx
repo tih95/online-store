@@ -1,19 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import styled from 'styled-components/macro';
+
+import { DirectorySectionContainer, DirectorySectionTitle } from './DirectorySection.styles';
+import { capitalize } from '../../helpers';
 
 const DirectorySection = ({ section, history, match }) => {
-  console.log(match);
+  
   return (
-    <div
-      css={`
-        background: ${section.imgUrl};
-        flex: 1;
-      `}
-      onClick={() => history.push(`${section.url}`)}>
-      <h1>{section.title}</h1>
-
-    </div>
+    <DirectorySectionContainer
+      imgUrl={section.imgUrl}
+      onClick={() => history.push(`${section.url}`)}
+    >
+      <DirectorySectionTitle>{capitalize(section.title)}</DirectorySectionTitle>
+    </DirectorySectionContainer>
   )
 }
 

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const HeroTitle = styled.h1`
   font-size: 3.4em;
   font-weight: 800;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 3em;
+  }
 `;
 
 export const HeroSubTitle = styled.p`
@@ -31,8 +35,10 @@ export const CtaSection = styled.div`
 export const ActionButton = styled.button`
   border: 2px solid #55efc4;
   background: #55efc4;
+  font-size: 1em;
   font-weight: 600;
   padding: 1em 1.2em;
   border-radius: 30px;
-  
+  transition: 0.3s all;
+  cursor: pointer;
 `;

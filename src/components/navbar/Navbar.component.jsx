@@ -19,7 +19,7 @@ const Navbar = () => {
       <AiOutlineMenu css={`display: none;`} />
 
       <NavLinks>
-        <NavLink to="/about">About Us</NavLink>
+        <NavLink to="/about">About</NavLink>
         <NavLink to="/shop">Shop</NavLink>
         <Cart css={`display: inline;`} />
       </NavLinks>

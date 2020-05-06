@@ -6,7 +6,7 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 1.4em 2em;
-  box-shadow: 0 4px 15px -2px gray;
+  box-shadow: 0 6px 15px -9px gray;
 `;
 
 export const LogoWrapper = styled.div`
