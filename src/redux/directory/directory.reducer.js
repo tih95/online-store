@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  directoryItems: [
+  sections: [
     {
       title: 'coffee',
       imgUrl: require('../../assets/directory-banners/coffee-banner.jpg'),
@@ -27,11 +27,11 @@ const INITIAL_STATE = {
   ]
 }
 
-const directoryReducer = (state = INITIAL_STATE, action) => {
+const categoriesReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     default:
       return state
   }
 }
 
-export default directoryReducer;
+export default categoriesReducer;
