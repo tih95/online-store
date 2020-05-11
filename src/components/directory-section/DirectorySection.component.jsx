@@ -1,11 +1,11 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import { DirectorySectionContainer, DirectorySectionTitle } from './DirectorySection.styles';
 import { capitalize } from '../../helpers';
 
 const DirectorySection = ({ section, history, match }) => {
-  
+  console.log(section.url);
   return (
     <DirectorySectionContainer
       imgUrl={section.imgUrl}

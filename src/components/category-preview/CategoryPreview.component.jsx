@@ -4,12 +4,12 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 import {capitalize} from '../../helpers';
 import ProductPreviewCard from '../product-preview-card/ProductPreviewCard.component';
-import { PreviewCardsContainer } from './CategoryPreview.styles';
+import { PreviewCardsContainer, CategoryPreviewContainer, SeeAllContainer } from './CategoryPreview.styles';
 
 const CategoryPreview = ({ category }) => {
 
   return (
-    <div>
+    <CategoryPreviewContainer>
       <h2>{capitalize(category.title)}</h2>
       <PreviewCardsContainer>
         {category.products.slice(0, 4).map(product => (
@@ -17,8 +17,10 @@ const CategoryPreview = ({ category }) => {
         ))}
       </PreviewCardsContainer>
       
-      <Link to={`/shop${category.route}`}>See all <span><AiOutlineRight /></span></Link>
-    </div>
+      <SeeAllContainer>
+        <Link to={`${category.route}`}>See all <span><AiOutlineRight /></span></Link>
+      </SeeAllContainer>
+    </CategoryPreviewContainer>
   )
 }
 

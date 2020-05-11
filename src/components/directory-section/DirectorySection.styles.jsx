@@ -17,6 +17,6 @@ export const DirectorySectionTitle = styled.h1`
   padding: 0.5em;
   color: white;
   background: rgba(0,0,0,0.7);
-  border-radius: 30px;
+  border-radius: 10px;
   margin: 0 auto;
 `;

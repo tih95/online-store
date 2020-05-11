@@ -10,7 +10,7 @@ const Shop = ({ match }) => {
   return (
     <>
       <Route exact path={`${match.path}`} component={CategoriesOverview} />
-      <Route path={`${match.path}/:category`} component={Category} />
+      <Route exact path={`${match.path}/:category`} component={Category} />
       <Route path={`${match.path}/:category/:product`} component={Product} />
     </>
   )

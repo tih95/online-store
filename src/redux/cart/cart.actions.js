@@ -1,6 +1,6 @@
-export const setCartItems = cartItems => {
+export const addCartItem = item => {
   return {
-    action: 'SET_CART_ITEMS',
-    payload: cartItems
+    type: 'ADD_CART_ITEM',
+    payload: item
   }
 }
