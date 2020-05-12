@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+export const CartIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
 export const CartItemCount = styled.p`
-  padding: 3px;
-  background: #d63031;
-  border-radius: 50%;
-  color: white;
-  position: absolute;
-  top: -10px;
-  right: -10px;
+  color: black;
+  margin-left: 0.3em;
+  font-weight: 700;
 `;

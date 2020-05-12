@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AiOutlineCoffee, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineCoffee } from 'react-icons/ai';
 import styled from 'styled-components/macro';
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
 
-import Cart from '../cart/Cart.component';
+import CartIcon from '../cart-icon/CartIcon.component';
 import { Header, LogoWrapper, LogoText, NavLinks, NavLink } from './Navbar.styles';
+import { selectCartItemCount, selectCartOpen } from '../../redux/cart/cart.selectors';
 
-const Navbar = () => {
+const Navbar = ({ itemCount, cartOpen }) => {
   return (
     <Header>
       <Link to="/">
@@ -16,17 +19,23 @@ const Navbar = () => {
         </LogoWrapper>
       </Link>
 
-      <AiOutlineMenu css={`display: none;`} />
+      {/*<AiOutlineMenu css={`display: none;`} />*/}
 
       <NavLinks>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/shop">Shop</NavLink>
-        <Cart css={`display: inline;`} />
+        <CartIcon itemCount={itemCount} />
       </NavLinks>
 
       
+
     </Header>
   )
 }
 
-export default Navbar;
+const mapStateToProps = createStructuredSelector({
+  itemCount: selectCartItemCount,
+  cartOpen: selectCartOpen
+})
+
+export default connect(mapStateToProps)(Navbar);

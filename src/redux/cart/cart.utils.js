@@ -14,6 +14,7 @@ export const addItem = (curItems, newItem) => {
       id: newItem.id,
       title: newItem.title,
       price: newItem.price,
+      imgUrl: newItem.imgUrl,
       quantity: 1
     })
   }

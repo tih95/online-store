@@ -1,23 +1,21 @@
 import React from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import styled from 'styled-components/macro';
-import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
-import { CartItemCount } from './CartIcon.styles';
-import { selectCartItemCount } from '../../redux/cart/cart.selectors';
+import { CartItemCount, CartIconContainer } from './CartIcon.styles';
+import { toggleCart } from '../../redux/cart/cart.actions';
 
-const CartIcon = ({ itemCount }) => {
+const CartIcon = ({ itemCount, toggleCart }) => {
   return (
-    <div css={`position: relative;`}>
+    <CartIconContainer onClick={toggleCart}>
       <AiOutlineShoppingCart size={28} />
       <CartItemCount>{itemCount}</CartItemCount>
-    </div>
+    </CartIconContainer>
   )
 }
 
-const mapStateToProps = createStructuredSelector({
-  itemCount: selectCartItemCount
+const mapDispatchToProps = dispatch => ({
+  toggleCart: () => dispatch(toggleCart()),
 })
 
-export default connect(mapStateToProps)(CartIcon);
+export default connect(null, mapDispatchToProps)(CartIcon);

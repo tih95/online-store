@@ -4,3 +4,9 @@ export const addCartItem = item => {
     payload: item
   }
 }
+
+export const toggleCart = () => {
+  return {
+    type: 'TOGGLE_CART'
+  }
+}
