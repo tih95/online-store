@@ -12,3 +12,4 @@ export const selectCategory = urlParam =>
     [selectAllCategories],
     categories => categories[urlParam]
 )
+

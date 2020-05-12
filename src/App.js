@@ -23,7 +23,7 @@ function App({ cartOpen, toggleCart, cartItems }) {
         sidebar={<SidebarContent cartItems={cartItems} />}
         open={cartOpen}
         onSetOpen={toggleCart}
-        styles={{ sidebar: { background: "white", width: '30%' } }}
+        styles={{ sidebar: { background: "white", width: '40%' } }}
       >
         <Navbar />
         <Switch>

@@ -7,6 +7,7 @@ const SHOP_DATA = {
       {
         id: 1,
         title: 'Hot Chcolate',
+        slug: 'hot-chocolate',
         route: '/shop/coffee/hot-chocolate',
         price: 3.50,
         description: '12oz drink',
@@ -15,6 +16,7 @@ const SHOP_DATA = {
       {
         id: 2,
         title: 'Campfire Mocha',
+        slug: 'campfire-mocha',
         route: '/shop/coffee/campfire-mocha',
         price: 5.50,
         description: '12oz drink. 2oz espresso, 10oz of milk and our house marshmallow/chocolate syrup.',
@@ -24,6 +26,7 @@ const SHOP_DATA = {
         id: 3,
         title: 'Nitro Vanilla Latte',
         route: '/shop/coffee/nitro-vanilla-latte',
+        slug: 'nitro-vanilla-latte',
         price: 4,
         description: '12oz nitro cold brew infused with vanilla and milk. Served chilled without ice',
         imgUrl: 'https://images.unsplash.com/photo-1504194472231-5a5294eddc43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -32,6 +35,7 @@ const SHOP_DATA = {
         id: 4,
         title: 'Dirty Horchata',
         price: 5.50,
+        slug: 'dirty-horchata',
         route: '/shop/coffee/dirty-horchata',
         description: '12oz drink. 2oz espresso with 10oz house horchata',
         imgUrl: 'https://static01.nyt.com/images/2019/05/21/dining/kwr-dirty-horchata/kwr-dirty-horchata-articleLarge.jpg'
@@ -40,6 +44,7 @@ const SHOP_DATA = {
         id: 5,
         title: 'Rose Latte',
         route: '/shop/coffee/rose-latte',
+        slug: 'rose-latte',
         price: 5,
         description: '12oz drink. 2oz espresso, 10oz of milk and rose syrup',
         imgUrl: 'https://choosingchia.com/jessh-jessh/uploads/2019/10/hibiscus-rose-latte-1.jpg'
@@ -52,17 +57,19 @@ const SHOP_DATA = {
     route: '/shop/tea',
     products: [
       {
-        id: 1,
+        id: 7,
         title: 'Earl Grey',
         price: 4,
+        slug: 'earl-grey',
         route: '/shop/tea/earl-grey',
         description: '12oz drink. Fresh steeped to order',
         imgUrl: 'https://images.unsplash.com/photo-1522520605515-22f0c506c369?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80'
       },
       {
-        id: 2,
+        id: 8,
         title: 'Earl Grey Latte',
         route: '/shop/tea/earl-grey-latte',
+        slug: 'earl-grey-latte',
         price: 5,
         description: '12oz drink. Earl Grea tea, honey and milk',
         imgUrl: 'https://images.unsplash.com/photo-1585594467309-b726b6ba2fb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80'
@@ -75,17 +82,19 @@ const SHOP_DATA = {
     route: '/shop/toast',
     products: [
       {
-        id: 1,
+        id: 9,
         title: 'Ricotta Jam',
         route: '/shop/toast/ricotta-jam',
+        slug: 'ricotta-jam',
         price: 8,
         description: 'Whipped ricotta and organic strawberry preserves',
         imgUrl: 'https://images.unsplash.com/photo-1522612468843-929d6cf4de8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80'
       },
       {
-        id: 2,
+        id: 10,
         title: 'Avocado Toast',
         route: '/shop/toast/avocado-toast',
+        slug: 'avocado-toast',
         price: 9,
         description: 'Organic cage free eggs, Kewpie mayo, dijon mustard, relish, micro greens and Maldon salt',
         imgUrl: 'https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80'
@@ -98,8 +107,9 @@ const SHOP_DATA = {
     route: '/shop/pastries',
     products: [
       {
-        id: 1,
+        id: 11,
         title: 'Vegan Carrot Cake',
+        slug: 'vegan-carrot-cake',
         route: '/shop/pastries/vegan-carrot-cake',
         price: 4.75,
         description: 'Weiser Farm carrots, pineapple, coconute, spices',
