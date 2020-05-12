@@ -21,3 +21,9 @@ export const addItem = (curItems, newItem) => {
 
   return copy;
 }
+
+export const removeItem = (curItems, itemToRemove) => {
+  return curItems.filter(item => {
+    return item.id !== itemToRemove.id
+  })
+}

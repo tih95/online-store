@@ -19,5 +19,14 @@ export const TopSection = styled.div`
 `;
 
 export const CartItemsSection = styled.div`
-  
+
+`;
+
+export const Total = styled.p`
+  font-weight: 700;
+  font-size: 1.6em;
+`;
+
+export const EmptyCartText = styled.p`
+  font-size: 1.4em;
 `;
