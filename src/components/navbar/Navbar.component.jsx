@@ -7,9 +7,9 @@ import { connect } from 'react-redux';
 
 import CartIcon from '../cart-icon/CartIcon.component';
 import { Header, LogoWrapper, LogoText, NavLinks, NavLink } from './Navbar.styles';
-import { selectCartItemCount, selectCartOpen } from '../../redux/cart/cart.selectors';
+import { selectCartItemCount } from '../../redux/cart/cart.selectors';
 
-const Navbar = ({ itemCount, cartOpen }) => {
+const Navbar = ({ itemCount }) => {
   return (
     <Header>
       <Link to="/">
@@ -34,8 +34,7 @@ const Navbar = ({ itemCount, cartOpen }) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-  itemCount: selectCartItemCount,
-  cartOpen: selectCartOpen
+  itemCount: selectCartItemCount
 })
 
 export default connect(mapStateToProps)(Navbar);
