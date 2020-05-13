@@ -5,6 +5,7 @@ import { ItemContainer, CartImage, RemoveButton, CartContent } from './CartItem.
 import { removeCartItem, editCartItem } from '../../redux/cart/cart.actions';
 
 const CartItem = ({ cartItem, removeCartItem, editCartItem }) => {
+  //TODO: make cart item look better
   return (
     <ItemContainer>
       <CartImage src={cartItem.imgUrl} alt={cartItem.title} />
