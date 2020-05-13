@@ -5,7 +5,7 @@ import { DirectorySectionContainer, DirectorySectionTitle } from './DirectorySec
 import { capitalize } from '../../helpers';
 
 const DirectorySection = ({ section, history, match }) => {
-  console.log(section.url);
+  
   return (
     <DirectorySectionContainer
       imgUrl={section.imgUrl}

@@ -23,7 +23,7 @@ const SidebarContent = ({ cartItems, toggleCart, cartItemCount }) => {
       <TopSection>
         <p>Cart</p>
         <p>{cartItemCount} items</p>
-        <AiOutlineClose size={24} onClick={toggleCart} />
+        <AiOutlineClose style={{cursor: 'pointer'}} size={24} onClick={toggleCart} />
       </TopSection>
       
       <hr style={{marginBottom: '1em'}} />

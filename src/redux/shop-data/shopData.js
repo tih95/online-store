@@ -6,7 +6,7 @@ const SHOP_DATA = {
     products: [
       {
         id: 1,
-        title: 'Hot Chcolate',
+        title: 'Hot Chocolate',
         slug: 'hot-chocolate',
         route: '/shop/coffee/hot-chocolate',
         price: 3.50,

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Card = styled(Link)`
   display: flex;
   justify-content: flex-start;
-  border: 2px solid black;
+  border: 2px solid #dfe6e9;
   border-radius: 4px;
   cursor: pointer;
 `;
