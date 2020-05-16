@@ -15,9 +15,8 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoText = styled.p`
-  font-size: 1.2em;
   font-weight: 700;
-  margin-right: 0.3em;
+  margin-right: 10px;
 `;
 
 export const NavLinks = styled.nav`

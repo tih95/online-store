@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
 export const CategoryPreviewContainer = styled.div`
-  padding: 0 2em;
   margin-bottom: 1.5em;
 `;
 
 export const PreviewCardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 1em 0;
 
-  > * {
-    flex: 1 1 30%;
-    margin: 1em;
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
   }
-`;
-
-export const SeeAllContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
 `;

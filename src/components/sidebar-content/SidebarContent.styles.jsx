@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const SidebarContentContainer = styled.div`
   display: flex;
@@ -29,4 +30,21 @@ export const Total = styled.p`
 
 export const EmptyCartText = styled.p`
   font-size: 1.4em;
+`;
+
+export const CheckoutButton = styled(Link)`
+  background: #55efc4;
+  padding: 1em;
+  border: 2px solid #55efc4;
+  border-radius: 20px;
+  margin: 1.5em 0;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+`;
+
+export const ContinueShopping = styled.p`
+  text-align: center;
+  color: #00b894;
+  cursor: pointer;
 `;

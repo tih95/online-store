@@ -3,7 +3,14 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { SidebarContentContainer, TopSection, CartItemsSection, Total, EmptyCartText } from './SidebarContent.styles';
+import { 
+  SidebarContentContainer, 
+  TopSection, 
+  CartItemsSection, 
+  Total, 
+  EmptyCartText,
+  CheckoutButton,
+  ContinueShopping } from './SidebarContent.styles';
 import { toggleCart } from '../../redux/cart/cart.actions';
 import CartItem from '../cart-item/CartItem.component';
 import { selectCartItemCount } from '../../redux/cart/cart.selectors';
@@ -41,6 +48,12 @@ const SidebarContent = ({ cartItems, toggleCart, cartItemCount }) => {
       <hr style={{margin: '1em 0'}} />
 
       <Total>Total: ${getTotalPrice().toFixed(2)}</Total>
+      {
+        cartItems.length !== 0 && 
+        <CheckoutButton onClick={toggleCart} to="/checkout">Checkout</CheckoutButton>
+      }
+      <ContinueShopping onClick={toggleCart}>Continue Shopping</ContinueShopping>
+      
     </SidebarContentContainer>
   )
 }

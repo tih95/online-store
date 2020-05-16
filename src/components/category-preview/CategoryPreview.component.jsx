@@ -11,15 +11,14 @@ const CategoryPreview = ({ category }) => {
   return (
     <CategoryPreviewContainer>
       <h2>{capitalize(category.title)}</h2>
+      
       <PreviewCardsContainer>
         {category.products.slice(0, 4).map(product => (
           <ProductPreviewCard key={product.id} product={product} />
         ))}
       </PreviewCardsContainer>
-      
-      <SeeAllContainer>
-        <Link to={`${category.route}`}>See all <span><AiOutlineRight /></span></Link>
-      </SeeAllContainer>
+
+      <Link to={`${category.route}`}>See all <span><AiOutlineRight /></span></Link>
     </CategoryPreviewContainer>
   )
 }

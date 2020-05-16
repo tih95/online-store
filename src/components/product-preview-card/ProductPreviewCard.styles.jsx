@@ -12,7 +12,7 @@ export const Card = styled(Link)`
 export const ContentSide = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 1.5;
   justify-content: space-between;
   padding: 1em;
 `;
