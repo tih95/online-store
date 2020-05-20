@@ -4,7 +4,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 import {capitalize} from '../../helpers';
 import ProductPreviewCard from '../product-preview-card/ProductPreviewCard.component';
-import { PreviewCardsContainer, CategoryPreviewContainer, SeeAllContainer } from './CategoryPreview.styles';
+import { PreviewCardsContainer, CategoryPreviewContainer, SeeAllText } from './CategoryPreview.styles';
 
 const CategoryPreview = ({ category }) => {
 
@@ -18,7 +18,12 @@ const CategoryPreview = ({ category }) => {
         ))}
       </PreviewCardsContainer>
 
-      <Link to={`${category.route}`}>See all <span><AiOutlineRight /></span></Link>
+      <Link to={`${category.route}`}>
+        <SeeAllText>
+          <p>See all {category.title}</p>
+          <AiOutlineRight />
+        </SeeAllText>
+      </Link>
     </CategoryPreviewContainer>
   )
 }

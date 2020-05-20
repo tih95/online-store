@@ -7,6 +7,7 @@ export const Card = styled(Link)`
   border: 2px solid #dfe6e9;
   border-radius: 4px;
   cursor: pointer;
+  height: 150px;
 `;
 
 export const ContentSide = styled.div`
@@ -15,6 +16,14 @@ export const ContentSide = styled.div`
   flex: 1.5;
   justify-content: space-between;
   padding: 1em;
+`;
+
+export const Description = styled.div`
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 3.6em;
+  text-overflow: ellipsis;
+  font-weight: 300;
 `;
 
 export const PreviewImage = styled.div`

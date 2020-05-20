@@ -1,7 +1,7 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-import { Card, ContentSide, PreviewImage, Price } from './ProductPreviewCard.styles';
+import { Card, ContentSide, PreviewImage, Price, Description } from './ProductPreviewCard.styles';
 
 const ProductPreviewCard = ({ product }) => {
   return (
@@ -13,7 +13,9 @@ const ProductPreviewCard = ({ product }) => {
     }}>
       <ContentSide>
         <h3>{product.title}</h3>
-        <p>{product.description}</p>
+        <Description>
+          <p>{product.description}</p>
+        </Description>  
         <Price>${product.price.toFixed(2)}</Price>
       </ContentSide>
       <PreviewImage imgUrl={product.imgUrl} />

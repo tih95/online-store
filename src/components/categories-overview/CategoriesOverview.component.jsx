@@ -19,7 +19,6 @@ const CategoriesOverview = ({ categories }) => {
         }
       `}
     >
-      <h1>Our Products</h1>
       {Object.keys(categories).map(key => (
         <CategoryPreview key={categories[key].id} category={categories[key]} />
       ))}
