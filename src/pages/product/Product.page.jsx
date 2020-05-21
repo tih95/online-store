@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { addCartItem } from '../../redux/cart/cart.actions';
-import { ProductImage } from './Product.styles';
+import { ProductImage, AddCartButton, ProductContainer } from './Product.styles';
 import { selectCategory } from '../../redux/shop-data/shopData.selectors';
 
 const Product = ({ addItemToCart, category, match }) => {
@@ -22,13 +22,13 @@ const Product = ({ addItemToCart, category, match }) => {
   }
   else {
     return (
-      <div>
+      <ProductContainer>
         <h1>{product.title}</h1>
         <ProductImage src={product.imgUrl} alt={`${product.title}`} />
         <p>{product.description}</p>
         <p>${product.price.toFixed(2)}</p>
-        <button onClick={() => addItemToCart(product)}>Add to cart</button>
-      </div>
+        <AddCartButton onClick={() => addItemToCart(product)}>Add to cart</AddCartButton>
+      </ProductContainer>
     )
   }
 }

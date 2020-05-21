@@ -11,16 +11,18 @@ import About from './pages/about/About.page';
 import Navbar from './components/navbar/Navbar.component';
 import Checkout from './pages/checkout/Checkout.page';
 import SidebarContent from './components/sidebar-content/SidebarContent.component';
+import SidebarMenu from './components/sidebar-menu/SidebarMenu.component';
 
 import { selectCartOpen, selectCartItems } from './redux/cart/cart.selectors';
+import { selectMenuOpen } from './redux/menu/menu.selectors';
+import { toggleMenu } from './redux/menu/menu.actions';
 import { toggleCart } from './redux/cart/cart.actions';
-
 
 import './App.css';
 
-function App({ cartOpen, toggleCart, cartItems }) {
+function App({ cartOpen, toggleCart, cartItems, menuOpen, toggleMenu }) {
   const isMobile = useMediaQuery({
-    query: '(max-device-width: 500px)'
+    query: '(max-width: 500px)'
   })
 
   return (
@@ -30,10 +32,13 @@ function App({ cartOpen, toggleCart, cartItems }) {
         sidebar={<SidebarContent cartItems={cartItems} />}
         open={cartOpen}
         onSetOpen={toggleCart}
-        styles={{ sidebar: { background: "white", width: `${isMobile ? '90%' : '40%'}` } }}
+        styles={{ sidebar: { background: "white", width: `${isMobile ? '80%' : '40%'}` } }}
       >
         <Sidebar
-          
+          sidebar={<SidebarMenu />}
+          open={menuOpen}
+          onSetOpen={toggleMenu}
+          styles={{sidebar: { background: "white", width: `${isMobile ? '80%' : '40%'}` } }}
         >
           <Navbar />
           <Switch>
@@ -51,11 +56,13 @@ function App({ cartOpen, toggleCart, cartItems }) {
 
 const mapStateToProps = createStructuredSelector({
   cartOpen: selectCartOpen,
-  cartItems: selectCartItems
+  cartItems: selectCartItems,
+  menuOpen: selectMenuOpen
 })
 
 const mapDispatchToProps = dispatch => ({
-  toggleCart: () => dispatch(toggleCart())
+  toggleCart: () => dispatch(toggleCart()),
+  toggleMenu: () => dispatch(toggleMenu())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

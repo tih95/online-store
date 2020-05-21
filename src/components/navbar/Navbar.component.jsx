@@ -5,28 +5,25 @@ import styled from 'styled-components/macro';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
-import CartIcon from '../cart-icon/CartIcon.component';
-import { Header, LogoWrapper, LogoText, NavLinks, NavLink } from './Navbar.styles';
-import { selectCartItemCount } from '../../redux/cart/cart.selectors';
 
-const Navbar = ({ itemCount }) => {
+import CartIcon from '../cart-icon/CartIcon.component';
+import { Header, MenuButton, Logo, NavLinks, NavLink } from './Navbar.styles';
+import { selectCartItemCount } from '../../redux/cart/cart.selectors';
+import { toggleMenu } from '../../redux/menu/menu.actions';
+
+const Navbar = ({ itemCount, toggleMenu }) => {
+
   return (
     <Header>
-      <Link to="/">
-        <LogoWrapper>
-          <LogoText>Tristan's Coffee</LogoText>
-          <AiOutlineCoffee size={24} />
-        </LogoWrapper>
-      </Link>
+      <Logo to="/">T-City Coffee</Logo>
 
-      {/*<AiOutlineMenu css={`display: none;`} />*/}
+      <MenuButton size={32} onClick={() => toggleMenu()} />
 
       <NavLinks>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/shop">Shop</NavLink>
         <CartIcon itemCount={itemCount} />
       </NavLinks>
-
       
 
     </Header>
@@ -37,4 +34,8 @@ const mapStateToProps = createStructuredSelector({
   itemCount: selectCartItemCount
 })
 
-export default connect(mapStateToProps)(Navbar);
+const mapDispatchToProps = dispatch => ({
+  toggleMenu: () => dispatch(toggleMenu())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
