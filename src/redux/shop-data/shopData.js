@@ -47,7 +47,7 @@ const SHOP_DATA = {
         slug: 'rose-latte',
         price: 5,
         description: '12oz drink. 2oz espresso, 10oz of milk and rose syrup',
-        imgUrl: 'https://choosingchia.com/jessh-jessh/uploads/2019/10/hibiscus-rose-latte-1.jpg'
+        imgUrl: 'https://blog.piquetea.com/wp-content/uploads/2019/12/Vanilla-Rooibos-Rose-Latte-Main-500x372.png'
       }
     ]
   },
@@ -81,7 +81,7 @@ const SHOP_DATA = {
         slug: 'chai-latte',
         price: 4.5,
         description: '12oz House Chai.',
-        imgUrl: 'https://awhiskandtwowands.com/wp-content/uploads/2018/08/Iced-Nana-Chai-Latte-SQUARE.jpg'
+        imgUrl: 'https://www.nespresso.com/ncp/res/uploads/recipes/nespresso-recipes-chai-latte.jpg'
       },
       {
         id: 34123423,
@@ -90,7 +90,7 @@ const SHOP_DATA = {
         slug: 'matcha-latte',
         price: 5.5,
         description: '12oz drink. 2oz matcha and 10oz of milk.',
-        imgUrl: 'https://images.japancentre.com/recipes/pics/16/main/matcha-latte.jpg?1469572822'
+        imgUrl: 'https://www.chopstickchronicles.com/wp-content/uploads/2020/05/Matcha-Latte-featured-10-500x375.jpg'
       },
       {
         id: 242343,
@@ -99,7 +99,7 @@ const SHOP_DATA = {
         route: '/shop/tea/tumeric-oat-latte',
         price: 4.5,
         description: '12oz House Turmeric Drink with Oatly Oat Milk.',
-        imgUrl: 'https://i2.wp.com/hauteandhealthyliving.com/wp-content/uploads/2020/02/Turmeric-Latte-9.jpg'
+        imgUrl: 'https://www.godairyfree.org/wp-content/uploads/2016/12/ff-oatmeal-latte-feature.jpg'
       }
     ]
   },
@@ -133,7 +133,7 @@ const SHOP_DATA = {
         slug: 'egg-salad',
         price: 8.30,
         description: 'Organic cage free eggs, Kewpie mayo, dijon mustard, relish, micro greens and Maldon salt.',
-        imgUrl: 'https://www.cookingforkeeps.com/wp-content/uploads/2019/05/Best-Avocado-Egg-Salad-Toast-4-1-720x720.jpg'
+        imgUrl: 'https://www.simplyrecipes.com/wp-content/uploads/2015/04/Egg-Salad-Sandwich-LEAD-3.jpg'
       },
       {
         id: 45354,
@@ -151,7 +151,7 @@ const SHOP_DATA = {
         slug: 'lox-toast',
         price: 8,
         description: 'Cream cheese, nova lox salmon, cherry tomatoes, red onion, micro greens, salt and pepper.',
-        imgUrl: 'https://data.thefeedfeed.com/recommended/post_4562859.jpg'
+        imgUrl: 'https://i.pinimg.com/originals/8d/10/1a/8d101a6d8dcc07db31adf1a9447c69e9.jpg'
       }
     ]
   },
@@ -176,7 +176,7 @@ const SHOP_DATA = {
         route: '/shop/pastries/blueberry-muffin',
         price: 6,
         description: 'Banana Chocolate Chip Walnut muffin is baked with fresh bananas, chocolate chips ,walnuts and is folded into a creme fraiche muffin batter. Our GF Blueberry muffin has organic blueberry and creme friache folded into a vanilla bean batter topped with a gluten free crumble.',
-        imgUrl: 'https://cdn.sallysbakingaddiction.com/wp-content/uploads/2018/06/blueberry-oatmeal-muffins.jpg'
+        imgUrl: 'https://i2.wp.com/smittenkitchen.com/wp-content/uploads//2010/08/perfect-blueberry-muffins.jpg?fit=1200%2C800&ssl=1'
       },
       {
         id: 131231,
@@ -194,7 +194,7 @@ const SHOP_DATA = {
         route: '/shop/pastries/snickerdoodle-cookie',
         price: 3.5,
         description: 'An old school classic, rich buttery sugar cookie topped with cinnamon sugar!',
-        imgUrl: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3206419.jpg'
+        imgUrl: 'https://images-gmi-pmc.edge-generalmills.com/d282f492-c920-4054-bc25-4ce934baae6b.jpg'
       },
       {
         id: 13241234,
