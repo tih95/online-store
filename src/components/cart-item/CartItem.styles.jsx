@@ -36,8 +36,13 @@ export const RemoveButton = styled.button`
   align-self: flex-start;
 `;
 
-export const QuantityInput = styled.input`
-  width: 30%;
-  height: 30px;
-  margin-bottom: 0.5em;
+export const Quantity = styled.p`
+  margin: 0 1em;
+  font-size: 1em;
+`;
+
+export const QuantitySection = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
 `;

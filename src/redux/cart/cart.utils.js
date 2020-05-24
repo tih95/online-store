@@ -1,25 +1,4 @@
 export const addItem = (cartItems, newCartItem) => {
-  // // find item exists
-  // const copy = [...curItems];
-
-  // const foundItem = copy.findIndex(item => newItem.id === item.id);
-  //   // if item exists, update the quantity
-
-  // // if item was found
-  // if (foundItem !== -1) {
-  //   copy[foundItem].quantity++;
-  // }
-  // else {
-  //   copy.push({
-  //     id: newItem.id,
-  //     title: newItem.title,
-  //     price: newItem.price,
-  //     imgUrl: newItem.imgUrl,
-  //     quantity: 1
-  //   })
-  // }
-
-  // return copy;
 
   const existingCartItem = cartItems.find(cartItem => cartItem.id === newCartItem.id);
 
@@ -40,13 +19,32 @@ export const removeItem = (curItems, itemToRemove) => {
   })
 }
 
-export const editItem = (curItems, itemToEdit, newQuantity) => {
+export const increaseItemQuantity = (curItems, itemToEdit) => {
   const foundItem = curItems.find(item => item.id === itemToEdit.id);
-
   
   return curItems.map(item => {
+    const newQuantity = item.quantity + 1;
+
     return item.id === foundItem.id 
       ? {...foundItem, quantity: newQuantity}
       : item
   })
+}
+
+export const decreaseItemQuantity = (curItems, itemToEdit) => {
+  const foundItem = curItems.find(item => item.id === itemToEdit.id);
+
+  const editedItems = curItems.map(item => {
+    const newQuantity = item.quantity - 1;
+
+    if (!newQuantity) {
+      return null;
+    }
+
+    return item.id === foundItem.id
+      ? {...foundItem, quantity: newQuantity}
+      : item
+  })
+
+  return editedItems.filter(item => item !== null);
 }

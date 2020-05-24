@@ -1,4 +1,4 @@
-import { addItem, removeItem, editItem } from './cart.utils';
+import { addItem, removeItem, increaseItemQuantity, decreaseItemQuantity } from './cart.utils';
 
 const INITIAL_STATE = {
   cartItems: [],
@@ -22,11 +22,16 @@ const cartReducer = (state=INITIAL_STATE, action) => {
         ...state,
         cartItems: removeItem(state.cartItems, action.payload)
       }
-    case 'EDIT_CART_ITEM':
-        return {
-          ...state,
-          cartItems: editItem(state.cartItems, action.payload.item, action.payload.newQuantity)
-        }
+    case 'INCREASE_QUANTITY':
+      return {
+        ...state,
+        cartItems: increaseItemQuantity(state.cartItems, action.payload)
+      }
+    case 'DECREASE_QUANTITY':
+      return {
+        ...state,
+        cartItems: decreaseItemQuantity(state.cartItems, action.payload)
+      }
     default:
       return state
   }

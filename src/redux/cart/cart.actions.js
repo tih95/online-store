@@ -12,10 +12,17 @@ export const removeCartItem = item => {
   }
 }
 
-export const editCartItem = (item, newQuantity) => {
+export const increaseQuantity = item => {
   return {
-    type: 'EDIT_CART_ITEM',
-    payload: {item, newQuantity}
+    type: 'INCREASE_QUANTITY',
+    payload: item
+  }
+}
+
+export const decreaseQuantity = item => {
+  return {
+    type: 'DECREASE_QUANTITY',
+    payload: item
   }
 }
 
