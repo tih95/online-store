@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 import { addCartItem } from '../../redux/cart/cart.actions';
 import { 
@@ -14,6 +15,7 @@ import {
 import { selectCategory } from '../../redux/shop-data/shopData.selectors';
 
 const Product = ({ addItemToCart, category, match }) => {
+  const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState();
   
   useEffect(() => {
@@ -24,6 +26,19 @@ const Product = ({ addItemToCart, category, match }) => {
     console.log(found);
     setProduct(found);
   }, [])
+
+  const minusQuantity = () => {
+    if (quantity - 1 < 0) {
+
+    }
+
+    setQuantity(quantity - 1);
+  }
+
+  const plusQuantity = () => {
+    setQuantity(quantity + 1);
+  }
+
 
   if (!product) {
     return null;
@@ -38,6 +53,7 @@ const Product = ({ addItemToCart, category, match }) => {
           <ProductTitle>{product.title}</ProductTitle>
           <ProductPrice>${product.price.toFixed(2)}</ProductPrice>
           <ProductDescription>{product.description}</ProductDescription>
+          <p>Quantity: <AiOutlineMinus />{quantity} <AiOutlinePlus/></p>
           <AddCartButton onClick={() => addItemToCart(product)}>Add to cart</AddCartButton>
         </RightColumn>
       </ProductContainer>

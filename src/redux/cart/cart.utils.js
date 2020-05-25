@@ -35,15 +35,16 @@ export const decreaseItemQuantity = (curItems, itemToEdit) => {
   const foundItem = curItems.find(item => item.id === itemToEdit.id);
 
   const editedItems = curItems.map(item => {
-    const newQuantity = item.quantity - 1;
+    if (item.id === foundItem.id) {
+      if (item.quantity - 1 === 0) {
+        return null;
+      }
 
-    if (!newQuantity) {
-      return null;
+      return {...foundItem, quantity: item.quantity - 1}
     }
-
-    return item.id === foundItem.id
-      ? {...foundItem, quantity: newQuantity}
-      : item
+    else {
+      return item;
+    }
   })
 
   return editedItems.filter(item => item !== null);

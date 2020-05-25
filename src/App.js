@@ -22,7 +22,7 @@ import './App.css';
 
 function App({ cartOpen, toggleCart, cartItems, menuOpen, toggleMenu }) {
   const isMobile = useMediaQuery({
-    query: '(max-width: 500px)'
+    query: '(max-width: 800px)'
   })
 
   return (
