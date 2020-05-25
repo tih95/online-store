@@ -38,6 +38,7 @@ export const RemoveButton = styled.button`
 
 export const Quantity = styled.p`
   margin: 0 1em;
+  font-weight: 600;
   font-size: 1em;
 `;
 
@@ -45,4 +46,7 @@ export const QuantitySection = styled.div`
   display: flex;
   align-items: center;
   margin: 1em 0;
+  border: 2px solid black;
+  align-self: flex-start;
+  padding: 0.7em;
 `;

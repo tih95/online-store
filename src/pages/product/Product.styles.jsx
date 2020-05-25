@@ -70,3 +70,8 @@ export const ProductDescription = styled.p`
 
   margin: 1.6em 0;
 `;
+
+export const QuantitySection = styled.div`
+  display: flex;
+  align-items: center;
+`;

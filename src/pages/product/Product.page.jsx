@@ -11,7 +11,8 @@ import {
   LeftColumn, 
   ProductTitle,
   ProductDescription, 
-  ProductPrice} from './Product.styles';
+  ProductPrice,
+  QuantitySection } from './Product.styles';
 import { selectCategory } from '../../redux/shop-data/shopData.selectors';
 
 const Product = ({ addItemToCart, category, match }) => {
@@ -53,8 +54,13 @@ const Product = ({ addItemToCart, category, match }) => {
           <ProductTitle>{product.title}</ProductTitle>
           <ProductPrice>${product.price.toFixed(2)}</ProductPrice>
           <ProductDescription>{product.description}</ProductDescription>
-          <p>Quantity: <AiOutlineMinus />{quantity} <AiOutlinePlus/></p>
-          <AddCartButton onClick={() => addItemToCart(product)}>Add to cart</AddCartButton>
+          <QuantitySection>
+            <p>Quantity: </p>
+            <AiOutlineMinus onClick={() => minusQuantity()} />
+            {quantity}
+            <AiOutlinePlus onClick={() => plusQuantity()} />
+          </QuantitySection>
+          <AddCartButton onClick={() => addItemToCart(product, quantity)}>Add to cart</AddCartButton>
         </RightColumn>
       </ProductContainer>
     )
@@ -66,7 +72,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  addItemToCart: item => dispatch(addCartItem(item))
+  addItemToCart: (item, quantity) => dispatch(addCartItem(item, Number(quantity)))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Product);

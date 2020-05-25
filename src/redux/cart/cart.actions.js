@@ -1,7 +1,7 @@
-export const addCartItem = item => {
+export const addCartItem = (item, quantity) => {
   return {
     type: 'ADD_CART_ITEM',
-    payload: item
+    payload: {item, quantity}
   }
 }
 
