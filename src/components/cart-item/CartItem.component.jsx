@@ -23,7 +23,7 @@ const CartItem = ({ cartItem, removeCartItem, increaseQuantity, decreaseQuantity
           <ItemPrice>${(cartItem.price * cartItem.quantity).toFixed(2)}</ItemPrice>
         </div>
         <QuantitySection>
-          <AiOutlineMinus onClick={() => decreaseQuantity(cartItem)}/>
+          <AiOutlineMinus onClick={() => decreaseQuantity(cartItem)} />
           <Quantity>{cartItem.quantity}</Quantity>
           <AiOutlinePlus onClick={() => increaseQuantity(cartItem)} />
         </QuantitySection>

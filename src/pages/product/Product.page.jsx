@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components/macro';
 import { connect } from 'react-redux';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import { addCartItem } from '../../redux/cart/cart.actions';
 import { 
@@ -12,7 +15,9 @@ import {
   ProductTitle,
   ProductDescription, 
   ProductPrice,
-  QuantitySection } from './Product.styles';
+  QuantitySection,
+  MinusIcon, 
+  PlusIcon } from './Product.styles';
 import { selectCategory } from '../../redux/shop-data/shopData.selectors';
 
 const Product = ({ addItemToCart, category, match }) => {
@@ -29,8 +34,8 @@ const Product = ({ addItemToCart, category, match }) => {
   }, [])
 
   const minusQuantity = () => {
-    if (quantity - 1 < 0) {
-
+    if (quantity - 1 <= 0) {
+      return;
     }
 
     setQuantity(quantity - 1);
@@ -40,6 +45,11 @@ const Product = ({ addItemToCart, category, match }) => {
     setQuantity(quantity + 1);
   }
 
+  const addToCart = () => {
+    addItemToCart(product, quantity);
+    toast.success("Successfully added to cart!");
+    setQuantity(1);
+  }
 
   if (!product) {
     return null;
@@ -56,12 +66,28 @@ const Product = ({ addItemToCart, category, match }) => {
           <ProductDescription>{product.description}</ProductDescription>
           <QuantitySection>
             <p>Quantity: </p>
-            <AiOutlineMinus onClick={() => minusQuantity()} />
-            {quantity}
-            <AiOutlinePlus onClick={() => plusQuantity()} />
+            <div
+              css={`
+                border: 2px solid black;
+                padding: 0.4em;
+                display: flex;
+                align-items: center;
+                margin-left: 0.4em;
+              `}
+            >
+              <MinusIcon disabled={quantity - 1 === 0} onClick={() => minusQuantity()} />
+              <p css={`margin: 0 0.5em;`}>{quantity}</p>
+              <PlusIcon onClick={() => plusQuantity()} />
+            </div>
           </QuantitySection>
-          <AddCartButton onClick={() => addItemToCart(product, quantity)}>Add to cart</AddCartButton>
+          <AddCartButton onClick={() => addToCart()}>Add to cart</AddCartButton>
         </RightColumn>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={2500}
+          closeOnClick
+          hideProgressBar={true} 
+        />
       </ProductContainer>
     )
   }

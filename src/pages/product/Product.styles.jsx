@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 export const ProductContainer = styled.div`
   padding: 2em 1em 0 1em;
   display: flex;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @media (max-width: 900px) {
@@ -31,6 +32,9 @@ export const LeftColumn = styled.section`
 
 export const RightColumn = styled.section`
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   
   @media (max-width: 900px) {
     width: 100%;
@@ -52,6 +56,7 @@ export const AddCartButton = styled.button`
   transition: 0.1s all;
   width: 60%; 
   font-size: 1.3em;
+  width: 100%;
 
   &:active {
     transform: scale(0.9);
@@ -60,7 +65,7 @@ export const AddCartButton = styled.button`
 `;
 
 export const ProductTitle = styled.h1`
-  font-size: 2.5em;
+  font-size: 2.2em;
 `;
 
 export const ProductDescription = styled.p`
@@ -74,4 +79,15 @@ export const ProductDescription = styled.p`
 export const QuantitySection = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
+`;
+
+export const MinusIcon = styled(AiOutlineMinus)`
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+`;
+
+export const PlusIcon = styled(AiOutlinePlus)`
+  cursor: pointer;
 `;

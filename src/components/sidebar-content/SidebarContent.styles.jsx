@@ -47,4 +47,5 @@ export const ContinueShopping = styled.p`
   text-align: center;
   color: #00b894;
   cursor: pointer;
+  margin-top: 1em;
 `;
