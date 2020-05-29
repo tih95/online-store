@@ -24,8 +24,7 @@ const Hero = ({ history }) => {
       `}
     >
       <HeroContent>
-        <HeroTitle>Welcome to Tristan's Coffee Shop</HeroTitle>
-        <HeroSubTitle>Best Damn Coffee Around</HeroSubTitle>
+        <HeroTitle>Welcome to T-City *FAKE* Coffee Shop</HeroTitle>
         <CtaSection>
           <p>Check out our shop!</p>
           <ActionButton onClick={() => history.push('/shop')}>Order Now</ActionButton>

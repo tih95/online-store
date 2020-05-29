@@ -7,7 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 
 import Landing from './pages/landing/Landing.page';
 import Shop from './pages/shop/Shop.page';
-import About from './pages/about/About.page';
 import Navbar from './components/navbar/Navbar.component';
 import Checkout from './pages/checkout/Checkout.page';
 import SidebarContent from './components/sidebar-content/SidebarContent.component';
@@ -44,7 +43,6 @@ function App({ cartOpen, toggleCart, cartItems, menuOpen, toggleMenu }) {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/shop" component={Shop} />
-            <Route exact path="/about" component={About} />
             <Route exact path="/checkout" component={Checkout} />
           </Switch>
         </Sidebar>

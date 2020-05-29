@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
   padding: 1.4em 2em;
   box-shadow: 0 6px 15px -9px gray;
 `;
@@ -19,6 +17,14 @@ export const Logo = styled(Link)`
     
   }
   
+`;
+
+export const Wrapper = styled.div`
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
 `;
 
 export const NavLinks = styled.nav`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 export const ProductContainer = styled.div`
-  padding: 2em 1em 0 1em;
+  padding: 2em 1em 2em 1em;
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -66,6 +66,10 @@ export const AddCartButton = styled.button`
 
 export const ProductTitle = styled.h1`
   font-size: 2.2em;
+
+  @media (max-width: 900px) {
+    margin-top: 0.5em;
+  }
 `;
 
 export const ProductDescription = styled.p`

@@ -5,14 +5,8 @@ export const HeroTitle = styled.h1`
   font-weight: 800;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 3em;
+    font-size: 2.6em;
   }
-`;
-
-export const HeroSubTitle = styled.p`
-  margin-top: 0.4em;
-  font-size: 2.4em;
-  font-weight: 200;
 `;
 
 export const HeroContent = styled.div`
