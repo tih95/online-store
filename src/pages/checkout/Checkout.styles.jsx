@@ -70,7 +70,6 @@ export const Input = styled.input`
   border: 2px solid rgba(0,0,0,0.3);
   border-radius: 3px;
   padding: 0.5em 0.7em;
-  display: block;
   margin-top: 0.5em;
   line-height: 20px;
 `;
@@ -84,6 +83,7 @@ export const Row = styled.div`
   margin-bottom: 1em;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const RowItem = styled.div`
